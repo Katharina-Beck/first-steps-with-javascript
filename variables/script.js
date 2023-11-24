@@ -1,37 +1,38 @@
-function welcomeMsg(firstName) {
-  // return "Welcome " + firstName + "!";
-  return `Welcome ${firstName}!`;
+let userName = "Brad";
+userName = "Jenna";
+
+function getUserNameLength(userName) {
+  return userName.length;
+  // return (result = userName.length);
 }
 
-console.log(welcomeMsg("Jane"));
-// Welcome Jane!
+console.log(getUserNameLength(userName) > 4);
+// ^______________ Should log true#
 
-console.log(welcomeMsg("Marc"));
+// Implement a isString function.
 
-// TODO: implement calcGrossPrice function
+//  The function has one parameter which could be any kind of data type
 
-function calcGrossPrice(netPrice, taxRate) {
-  const grossPrice = netPrice * (taxRate + 1);
-  return grossPrice.toFixed(1);
+//  The function is written as a function expression
+
+//  The function returns a boolean. It returns only true, when the data type is a string otherwise it will return false
+// TODO: Implement the isString function
+
+function isString(data) {
+  return typeof data === "string";
 }
 
-console.log(calcGrossPrice(20, 0.19));
-// result should be 23.8
+console.log(isString("Hello"));
+// result should be true
 
-console.log(calcGrossPrice(40, 0.16));
-// result should be 46.4
+console.log(isString(3));
+// result should be false
 
-// TODO: Implement the addPositive function
+console.log(isString(undefined));
+// result should be false
 
-const addPositive = function (a, b) {
-  return Math.abs(a) + Math.abs(b);
-};
+console.log(isString(""));
+// result should be true
 
-console.log(addPositive(2, 3));
-// result1 should be 5
-
-console.log(addPositive(3, -5));
-// result2 should be 8
-
-console.log(addPositive(-1, -8));
-// result2 should be 9
+console.log(isString("John" + "Doe"));
+// result should be true
