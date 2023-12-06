@@ -49,5 +49,150 @@ const arr2 = [
   "When you have",
   "to explain it, it's bad!",
 ];
+
 console.log(sumOfCharacters(arr2));
 // result should be: 55
+
+const rightSidePower = {
+  m: 4,
+  q: 3,
+  d: 2,
+  z: 1,
+};
+
+let leftScore = 0;
+let rightScore = 0;
+
+for (let i = 0; i < fight.length; i++) {
+  let letter = fight[i];
+  if (leftSidePower[letter]) {
+    leftScore += leftSidePower[letter];
+  } else if (rightSidePower[letter]) {
+    rightScore += rightSidePower[letter];
+  }
+}
+if (leftScore > rightScore) return `Left side wins!`;
+else if (leftScore < rightScore) return `Right side wins!`;
+else return `Let's fight again`;
+
+return "Let's fight again!";
+
+arr1.forEach((element) => {});
+
+//  const deadPeople = ['Lucas', 'Bill'];
+
+// }
+
+// let suspects = 0;
+// let lastSeen = 0;
+
+// for (let i = 0; i < dead.length; i++)
+
+// {
+//   let name = dead[i];
+//   if (suspects[name]) {
+//     suspects += allSuspects[name];
+//   } else if (lastSeen[name]) {
+//     lastSeen += deadPeople[name];
+//   }
+
+// }
+// // }
+// function killer(suspectInfo, dead){
+
+//     const suspectsJames = ['Jacob', 'Bill', 'Lucas'];
+//     const suspectJohnny = ['David', 'Kyle', 'Lucas'];
+//     const suspectPeter = ['Lucy', 'Kyle'];
+
+//     const deadPeople = ['Lucas', 'Bill'];
+//     let James = 0;
+//     let Johnny = 0;
+//     let Perter = 0;
+// }
+
+//     // for (let i = 0; i < dead.length; i++)
+
+//     {
+//       let James = dead[i];
+//       if (suspects[James]) {
+//         suspects += allSuspects[James];
+//         return "James is the murder!"
+//       } else if (lastSeen[name]) {
+//         lastSeen += deadPeople[name];
+//       }
+
+//       function sumOfCharacters(array)
+
+// }
+
+function killer(suspectInfo, dead) {
+  let stringArray = suspectInfo.filter((item) => typeof item === "string");
+  let count = 0;
+  for (let index = 0; index < stringArray.length; index++) {
+    count += stringArray[index].length;
+  }
+  return count;
+}
+
+function killer(suspectInfo, dead) {
+  const allSuspects = suspectInfo;
+  {
+    const allSuspects = {
+      James: ["Jacob", "Bill", "Lucas"],
+      Johnny: ["David", "Kyle", "Lucas"],
+      Peter: ["Lucy", "Kyle"],
+    };
+    const deadPeople = ["Lucas", "Bill"];
+  }
+
+  let suspects = [];
+  let lastSeen = [];
+
+  for (let i = 0; i < dead.length; i++) {
+    let name = dead[i];
+    if (allSuspects[name]) {
+      suspects = allSuspects[name];
+    } else if (lastSeen[name]) {
+      lastSeen = allSuspects[name];
+    }
+  }
+}
+
+const allSuspects = suspectInfo;
+{
+  const allSuspects = {
+    James: ["Jacob", "Bill", "Lucas"],
+    Johnny: ["David", "Kyle", "Lucas"],
+    Peter: ["Lucy", "Kyle"],
+  };
+  const deadPeople = ["Lucas", "Bill"];
+}
+
+let suspects = [];
+let lastSeen = [];
+
+for (let i = 0; i < dead.length; i++) {
+  let name = dead[i];
+  if (allSuspects[name]) {
+    suspects = allSuspects[name];
+  } else if (lastSeen[name]) {
+    lastSeen = allSuspects[name];
+  }
+}
+
+function killer(suspectInfo, dead) {
+  for (const suspectName in suspectInfo) {
+    let seenBySuspect = suspectInfo[suspectName];
+    let isKiller = true;
+    for (let i = 0; i < dead.length; i++) {
+      if (seenBySuspect.indexOf(dead[i]) === -1) {
+        isKiller = false;
+        break;
+      }
+    }
+    if (isKiller) {
+      return suspectName;
+    }
+  }
+}
+//console.log (killer({'Brad': [], 'Megan': ['Ben', 'Kevin'], 'Finn': []}, ['Ben']), 'Megan');
